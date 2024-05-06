@@ -1,1 +1,175 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+:root {
+    --accent-color: #d3ecdd;
+    --main-color: #1d1d1d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Offset fix for OVERLAPPING problems of FIXED HEADER and ON-PAGE links */
+:target {
+    display: block;
+    position: relative;
+    top: -20vh;
+    /* this is the offset */
+    visibility: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--main-color);
+    background-color: white;
+    transition: all 1s ease-out;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*-------------------------------------------
+    1) A- TEXTS
+    -------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* Fluid font-size */
+// @media screen and (min-width: 37.5rem) {
+//     h1 {
+//         font-size: calc(1.5rem + 0.5 * ((100vw - 37.5rem) / 82.5));
+//     }
+// }
+
+@media screen and (min-width: 120rem) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+h2 {
+    letter-spacing: 0.5em;
+    margin: 0 auto 0.25em auto;
+}
+
+h3,
+h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin: 0 auto 0.5em auto;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2+p {
+    margin: 0 auto 2.5em auto;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.accent {
+    position: relative;
+    z-index: 1;
+}
+
+.accent::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.25em;
+    height: 0.5rem;
+    background: var(--accent-color);
+    z-index: -1;
+}
+
+
+
+/*-------------------------------------------
+    1) B- BUTTONS
+    -------------------------------------------*/
+
+.button {
+    font-size: 0.8rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background-color: var(--accent-color);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: none;
+}
+
+input[type="submit"] {
+    font-size: 0.8rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+    border: none;
+    background-color: var(--accent-color);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: letter-spacing 0.5s ease-out;
+}
+
+input[type="submit"]:hover {
+    letter-spacing: 0.35em;
+    box-shadow: none;
+}
+
+
+
+/*-------------------------------------------
+    1) C- IMAGES
+    -------------------------------------------*/
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,108 @@
+/*-----------------------------------------------
+3) MAIN
+-----------------------------------------------*/
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.5vw;
+}
+
+/* Fluid padding */
+@media screen and (min-width: 37.5rem) {
+    main {
+        padding: 0 calc(0vw + 20 * ((100vw - 37.5rem) / 82.5));
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    main {
+        padding: 0 20vw;
+    }
+}
+
+
+main>section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+
+
+/*-------------------------------------------
+    3) A- INTRO
+    -------------------------------------------*/
+
+#intro {
+    height: 100vh;
+    padding: 12vh 0 0 0;
+}
+
+/* Fluid padding-top */
+@media screen and (min-width: 37.5rem) {
+    #intro {
+        padding-top: calc(12vh + -4 * ((100vw - 37.5rem) / 82.5));
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    #intro {
+        padding-top: 8vh;
+    }
+}
+
+.figure-intro {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "all";
+    justify-items: center;
+    align-items: start;
+    margin: 0 auto;
+}
+
+.circle-intro {
+    grid-area: all;
+    max-width: 75%;
+    z-index: 1;
+    opacity: 0;
+    animation: appear-circle 1.25s ease-out forwards;
+}
+
+@keyframes appear-circle {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.img-intro {
+    grid-area: all;
+    max-width: 75%;
+    z-index: 2;
+    opacity: 0;
+    animation: appear-img 2s 1.25s ease-out forwards;
+}
+
+@keyframes appear-img {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
