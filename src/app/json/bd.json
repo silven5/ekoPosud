@@ -11,6 +11,10 @@
     "mat3": {
       "id": "mat3",
       "name": "Глина"
+    },
+    "mat4": {
+      "id": "mat4",
+      "name": "Дуб"
     }
   },
   "types": {
@@ -25,6 +29,14 @@
     "type3": {
       "id": "type3",
       "name": "Миска"
+    },
+    "type4": {
+      "id": "type4",
+      "name": "Чайник"
+    },
+    "type5": {
+      "id": "type5",
+      "name": "Салатниця"
     }
   },
   "products": {
@@ -32,17 +44,91 @@
       "id": "prod1",
       "name": "Чашка з горіха",
       "description": "Ручна робота з натурального горіхового дерева. Виготовлена в Карпатах.",
-      "photoUrl": "images/products/prod1.jpg",
+      "photoUrl": "https://github.com/silven5/ekoPosud/blob/master/src/app/Image/prod1.jpg?raw=true",
       "typeId": "type2",
-      "materialId": "mat2"
+      "materialId": "mat2",
+      "price": 320
     },
     "prod2": {
       "id": "prod2",
       "name": "Миска з бамбука",
       "description": "Легка та міцна миска з еко-бамбука. Ідеально підходить для салатів.",
-      "photoUrl": "images/products/prod2.jpg",
+      "photoUrl": "https://github.com/silven5/ekoPosud/blob/master/src/app/Image/prod2.jpg?raw=true",
       "typeId": "type3",
-      "materialId": "mat1"
+      "materialId": "mat1",
+      "price": 190
+    },
+    "prod3": {
+      "id": "prod3",
+      "name": "Тарілка з глини",
+      "description": "Керамічна тарілка з натуральної глини. Стильний дизайн, підходить для будь-якого столу.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Clay_plate.jpg",
+      "typeId": "type1",
+      "materialId": "mat3",
+      "price": 210
+    },
+    "prod4": {
+      "id": "prod4",
+      "name": "Чайник з бамбука",
+      "description": "Чайник з еко-бамбука, чудово підходить для заварювання чаю.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Bamboo_teapot.jpg",
+      "typeId": "type4",
+      "materialId": "mat1",
+      "price": 380
+    },
+    "prod5": {
+      "id": "prod5",
+      "name": "Салатниця з дуба",
+      "description": "Глибока салатниця з дуба з природним захистом олією. Ідеальна для великих порцій.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Oak_wood_bowl.jpg",
+      "typeId": "type5",
+      "materialId": "mat4",
+      "price": 460
+    },
+    "prod6": {
+      "id": "prod6",
+      "name": "Чашка з глини",
+      "description": "Чашка ручної роботи з обпаленої глини. Тримає тепло довше.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Ceramic_Mug.jpg",
+      "typeId": "type2",
+      "materialId": "mat3",
+      "price": 170
+    },
+    "prod7": {
+      "id": "prod7",
+      "name": "Миска з дуба",
+      "description": "Міцна та витончена миска з дуба для щоденного користування.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Oak_bowl.jpg",
+      "typeId": "type3",
+      "materialId": "mat4",
+      "price": 310
+    },
+    "prod8": {
+      "id": "prod8",
+      "name": "Тарілка з бамбука",
+      "description": "Екологічна тарілка з бамбука – легка, стійка до подряпин.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Bamboo_plate.jpg",
+      "typeId": "type1",
+      "materialId": "mat1",
+      "price": 150
+    },
+    "prod9": {
+      "id": "prod9",
+      "name": "Чайник з глини",
+      "description": "Глиняний чайник з традиційним карпатським орнаментом.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Clay_teapot.jpg",
+      "typeId": "type4",
+      "materialId": "mat3",
+      "price": 400
+    },
+    "prod10": {
+      "id": "prod10",
+      "name": "Салатниця з бамбука",
+      "description": "Салатниця для родинного столу з легкого бамбука. Стильна і зручна.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Bamboo_salad_bowl.jpg",
+      "typeId": "type5",
+      "materialId": "mat1",
+      "price": 270
     }
   }
 }

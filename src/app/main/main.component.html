@@ -19,18 +19,33 @@
     </h1>
   </section>
   <section>
-    Купуй наш посуд
-    <div *ngIf="productsWithInfo$ | async as products; else loading">
-      <div *ngFor="let product of products">
-        <h3>{{ product.name }}</h3>
-        <p>{{ product.description }}</p>
-        <p>Матеріал: {{ product.material?.name }}</p>
-        <p>Тип: {{ product.type?.name }}</p>
+    <h1><span class="uppercase accent">Купуй наш посуд</span></h1>
+
+    <div
+      *ngIf="productsWithInfo$ | async as products; else loading"
+      class="flex"
+    >
+      <div *ngFor="let product of products" class="product-card">
         <img
           *ngIf="product.photoUrl"
           [src]="product.photoUrl"
           alt="{{ product.name }}"
+          class="product-image"
         />
+        <div class="card-description">
+          <h3>
+            <span class="uppercase accent">{{ product.name }}</span>
+          </h3>
+          <p>{{ product.description }}</p>
+          <p>Матеріал: {{ product.material?.name }}</p>
+          <p>Тип: {{ product.type?.name }}</p>
+          <div class="product-price">
+            {{ product.price | currency : "UAH" }}
+          </div>
+          <button (click)="addToCart(product)" class="buy-button">
+            Купити
+          </button>
+        </div>
       </div>
     </div>
 

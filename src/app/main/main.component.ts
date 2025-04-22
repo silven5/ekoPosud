@@ -13,6 +13,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './main.component.scss',
 })
 export class MainComponent {
+  addToCart(_t21: Product & { material?: Material; type?: DishType }) {
+    throw new Error('Method not implemented.');
+  }
   productsWithInfo$!: Observable<
     (Product & { material?: Material; type?: DishType })[]
   >;
@@ -21,8 +24,8 @@ export class MainComponent {
 
   ngOnInit(): void {
     this.productsWithInfo$ = this.ecoService.getProductsWithFullInfo();
-    this.productsWithInfo$.subscribe((products) => {
-      console.log(products);
-    });
+    // this.productsWithInfo$.subscribe((products) => {
+    //   console.log(products);
+    // });
   }
 }
