@@ -1,5 +1,5 @@
 <main>
-  <section id="intro">
+  <section id="intro" class="section-header">
     <div class="figure-intro">
       <img
         class="circle-intro"
@@ -8,14 +8,34 @@
       />
       <img
         class="img-intro"
-        src="https://github.com/silven5/ekoPosud/blob/master/src/app/Image/pott.png"
+        src="https://raw.githubusercontent.com/silven5/ekoPosud/master/src/app/Image/pott.png"
         alt="Dwarf chin cactus in a bronze planter"
       />
     </div>
 
-    <h1>
+    <h1 class="h1">
       Посуд з Карпат<br />для Вашого <span class="uppercase accent">дому</span>
       <br />
     </h1>
+  </section>
+  <section>
+    Купуй наш посуд
+    <div *ngIf="productsWithInfo$ | async as products; else loading">
+      <div *ngFor="let product of products">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p>Матеріал: {{ product.material?.name }}</p>
+        <p>Тип: {{ product.type?.name }}</p>
+        <img
+          *ngIf="product.photoUrl"
+          [src]="product.photoUrl"
+          alt="{{ product.name }}"
+        />
+      </div>
+    </div>
+
+    <ng-template #loading>
+      <p>Завантаження...</p>
+    </ng-template>
   </section>
 </main>

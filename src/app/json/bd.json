@@ -1,0 +1,48 @@
+{
+  "materials": {
+    "mat1": {
+      "id": "mat1",
+      "name": "Бамбук"
+    },
+    "mat2": {
+      "id": "mat2",
+      "name": "Горіхове дерево"
+    },
+    "mat3": {
+      "id": "mat3",
+      "name": "Глина"
+    }
+  },
+  "types": {
+    "type1": {
+      "id": "type1",
+      "name": "Тарілка"
+    },
+    "type2": {
+      "id": "type2",
+      "name": "Чашка"
+    },
+    "type3": {
+      "id": "type3",
+      "name": "Миска"
+    }
+  },
+  "products": {
+    "prod1": {
+      "id": "prod1",
+      "name": "Чашка з горіха",
+      "description": "Ручна робота з натурального горіхового дерева. Виготовлена в Карпатах.",
+      "photoUrl": "images/products/prod1.jpg",
+      "typeId": "type2",
+      "materialId": "mat2"
+    },
+    "prod2": {
+      "id": "prod2",
+      "name": "Миска з бамбука",
+      "description": "Легка та міцна миска з еко-бамбука. Ідеально підходить для салатів.",
+      "photoUrl": "images/products/prod2.jpg",
+      "typeId": "type3",
+      "materialId": "mat1"
+    }
+  }
+}

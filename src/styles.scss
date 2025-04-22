@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 :root {
     --accent-color: #d3ecdd;
+    --accent-black-color: #bdf8d4;
     --main-color: #1d1d1d;
 }
 
@@ -112,7 +113,7 @@ h2+p {
     right: 0;
     bottom: 0.25em;
     height: 0.5rem;
-    background: var(--accent-color);
+    background: var(--accent-black-color);
     z-index: -1;
 }
 

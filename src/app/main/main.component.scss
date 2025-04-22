@@ -23,8 +23,7 @@ main {
     }
 }
 
-
-main>section {
+.section-header {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -32,14 +31,12 @@ main>section {
     margin-bottom: 4rem;
 }
 
-
-
 /*-------------------------------------------
     3) A- INTRO
     -------------------------------------------*/
 
 #intro {
-    height: 100vh;
+    // height: 100vh;
     padding: 12vh 0 0 0;
 }
 
@@ -61,8 +58,7 @@ main>section {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas:
-        "all";
+    grid-template-areas: "all";
     justify-items: center;
     align-items: start;
     margin: 0 auto;
@@ -88,7 +84,6 @@ main>section {
     }
 }
 
-
 .img-intro {
     grid-area: all;
     max-width: 75%;
@@ -105,4 +100,8 @@ main>section {
     to {
         opacity: 1;
     }
+}
+.h1 {
+    margin-top: -25%;
+    z-index: 55;
 }
